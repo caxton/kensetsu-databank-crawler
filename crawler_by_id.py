@@ -91,8 +91,8 @@ def crawl_kensetsu_databank_range(start_id, end_id, append_to_existing=True, num
                     all_data = []
 
                 # Display progress on the same line
-                progress = round((i+1 * 100) / total_ids, 2) * 100
-                print(f"\rCrawled {i+1}/{total_ids} ({progress}%): {base_url + str(start_id + i)}, cache size: {len(all_data)}", end="")
+                progress = round((i+1) / total_ids, 3) * 100
+                print(f"\rCrawled {i+1}/{total_ids} ({progress:.1f}%): {base_url + str(start_id + i)}, cache size: {len(all_data)}", end="")
 
                 # Introduce a delay between requests
                 # time.sleep(0.2)
